@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  role_vp: 1
+  gender_vp: 1
+  cc: MyString
+  string: MyString
+  name: MyString
+  address: MyString
+  email: MyString
+  password_digest: MyString
+  phone_number: 
+  date_of_birth: 2019-04-16
+  api_token: MyString
+
+two:
+  role_vp: 1
+  gender_vp: 1
+  cc: MyString
+  string: MyString
+  name: MyString
+  address: MyString
+  email: MyString
+  password_digest: MyString
+  phone_number: 
+  date_of_birth: 2019-04-16
+  api_token: MyString

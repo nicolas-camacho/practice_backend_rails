@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  phone: one
+  price: 9.99
+  date: 2019-04-16
+  warranty: 2019-04-16 19:26:29
+
+two:
+  user: two
+  phone: two
+  price: 9.99
+  date: 2019-04-16
+  warranty: 2019-04-16 19:26:29
