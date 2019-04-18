@@ -7,7 +7,7 @@ module Api
 			wrap_parameters :user, include: %i[role_vp gender_vp cc name address email password password_confirmation phone_number date_of_birth ]
 			def index
 				@users = User.all
-				render json: { users: @users }, status: :ok
+				render :index
 			end
 
 			def genders
@@ -15,7 +15,6 @@ module Api
 			end
 
 			def show
-				render json: {data: @user}, status: :ok
 			end
 
 			def create

@@ -4,12 +4,11 @@ module Api
 
 			before_action :set_headquarter, only: %i[show update destroy]
 			def index
-				@hq = Headquarter.all
-				render json: { headquarters: @hq }, status: :ok
+				@hqs = Headquarter.all
+				render :index
 			end
 
 			def show
-				render json: {data: @hq}, status: :ok
 			end
 
 			def create
