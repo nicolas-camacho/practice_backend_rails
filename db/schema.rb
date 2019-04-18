@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_17_002629) do
+ActiveRecord::Schema.define(version: 2019_04_18_004440) do
 
   create_table "headquarters", force: :cascade do |t|
     t.integer "user_id"
@@ -49,12 +49,11 @@ ActiveRecord::Schema.define(version: 2019_04_17_002629) do
     t.integer "role_vp"
     t.integer "gender_vp"
     t.string "cc"
-    t.string "string"
     t.string "name"
     t.string "address"
     t.string "email"
     t.string "password_digest"
-    t.bigint "phone_number"
+    t.integer "phone_number"
     t.date "date_of_birth"
     t.string "api_token"
     t.datetime "created_at", null: false

@@ -11,6 +11,8 @@ class User < ApplicationRecord
 
 	has_secure_password
 	
+	has_one :headquarters
+
 	has_many :phones
 	has_many :phones, through: :purchases
 
