@@ -3,6 +3,7 @@ module Api
 		class UsersController < ApiController
 
 			before_action :set_user, only: %i[show update destroy]
+			before_action :authenticate_token!, except: %i[login]
 
 			wrap_parameters :user, include: %i[role_vp gender_vp cc name address email password password_confirmation phone_number date_of_birth ]
 			def index
@@ -15,6 +16,23 @@ module Api
 			end
 
 			def show
+			end
+
+			def login
+				@user = User.find_by_email(params[:email])
+				if @user&.authenticate(params[:password])
+					render :login
+				else
+					render json: { message: "Invalid credentials" }, status: :unauthorized
+				end
+			end
+
+			def logout
+				if @api_user.update_column(:api_token, nil)
+					render json: { message: 'Logged out successfully', data: @api_user }, status: :ok
+				else
+					render json: { message: 'User not logget out', data: @api_user.errors }, status: :unprocessable_entity
+				end
 			end
 
 			def create

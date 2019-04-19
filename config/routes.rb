@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'user/genders', to: 'users#genders'
+      post 'auth/login', to: 'user#login'
       resources :users, :headquarters, :phones, :purchases
     end
   end
